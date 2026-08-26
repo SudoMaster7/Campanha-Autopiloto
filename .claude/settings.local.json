@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:\\\\Users\\\\leosc\\\\OneDrive\\\\Área de Trabalho\\\\Funil Pages\\\\assets\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\leosc\\OneDrive\\Área de Trabalho\\Funil Pages"
+    ]
+  }
+}
