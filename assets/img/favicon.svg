@@ -1,11 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="ring" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#9C7A2C"/>
-      <stop offset="1" stop-color="#B8933C"/>
+    <linearGradient id="flame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF4D4D"/>
+      <stop offset="100%" stop-color="#D30000"/>
     </linearGradient>
   </defs>
-  <rect width="64" height="64" rx="15.5" fill="#1D1D1F"/>
-  <circle cx="32" cy="32" r="18.5" fill="none" stroke="url(#ring)" stroke-width="5.5"/>
-  <circle cx="32" cy="13.5" r="4.2" fill="#9C7A2C"/>
+  <rect width="512" height="512" rx="96" fill="#0A0A0C"/>
+  <path fill="url(#flame)" d="M256 60c14 62-24 96-58 130-40 40-70 84-70 140 0 90 76 150 128 150s128-60 128-150c0-46-20-82-46-112 4 34-10 58-32 70 10-40-4-78-30-104-8 40-30 64-58 78 6-40-2-84-30-118 10 48-6 82-30 104 6-58 44-108 98-188z"/>
 </svg>

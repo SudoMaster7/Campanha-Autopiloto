@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chama</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="alternate icon" href="assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="frame no-cta">
+    <div class="top-bar">
+      <a class="btn-back" href="etapa-11.html" aria-label="Voltar para etapa anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </a>
+      <div class="progress" role="img" aria-label="Etapa 12 de 12">
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+        <span class="seg filled"></span>
+      </div>
+    </div>
+
+    <main class="fade-in">
+      <section id="form" style="text-align:center;">
+        <p class="eyebrow" style="justify-content:center;">12 · Diagnóstico gratuito</p>
+        <h1 class="title">Vamos elevar a sua empresa ao que ela precisa ser hoje.</h1>
+        <p class="subtext">Preencha abaixo e nossa equipe entra em contato pelo WhatsApp com todas as orientações.</p>
+
+        <!-- Formulário de captura — envia direto para o Supabase, ver assets/supabase-lead.js e assets/config.js -->
+        <form id="lead-form" action="#" method="post" style="text-align:left;">
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input required type="text" id="nome" name="nome">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input required type="email" id="email" name="email">
+          </div>
+          <div class="field">
+            <label for="whatsapp">WhatsApp</label>
+            <input required type="tel" id="whatsapp" name="whatsapp">
+          </div>
+          <div class="field">
+            <label for="localizacao">Cidade / UF</label>
+            <input required type="text" id="localizacao" name="localizacao" placeholder="Ex.: São Paulo / SP">
+          </div>
+          <div class="field">
+            <label for="tipo">Segmento da empresa</label>
+            <select required id="tipo" name="tipo" onchange="verificaropcao(this)">
+              <option value="">Selecione</option>
+              <option>Restaurante, bar ou cafeteria</option>
+              <option>Delivery ou food service</option>
+              <option>Comércio e varejo</option>
+              <option>Prestação de serviços</option>
+              <option>Saúde, beleza e bem-estar</option>
+              <option value="outro">Outro</option>
+            </select>
+          </div>
+          <div id="outro-field" class="field" style="display:none;">
+            <label for="outro">Por favor, especifique:</label>
+            <input type="text" id="outro" name="outro">
+          </div>
+          <div class="field">
+            <label for="ticket">Ticket médio</label>
+            <select required id="ticket" name="ticket">
+              <option value="">Selecione</option>
+              <option>Até R$ 50</option>
+              <option>R$ 50 – R$ 200</option>
+              <option>R$ 200 – R$ 1.000</option>
+              <option>Acima de R$ 1.000</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="capacidade">Sua empresa consegue atender mais clientes hoje?</label>
+            <select required id="capacidade" name="capacidade">
+              <option value="">Selecione</option>
+              <option>Sim, temos espaço para crescer</option>
+              <option>Não, estamos no limite</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary">Quero meu diagnóstico gratuito</button>
+          <p id="lead-form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <footer class="page-footer">
+        <div class="mark">CHAMA</div>
+        <div class="fine">Posicionamento digital · © 2026</div>
+      </footer>
+    </main>
+
+  </div>
+
+  <script src="assets/app.js"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/supabase-lead.js"></script>
+</body>
+</html>

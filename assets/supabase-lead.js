@@ -1,4 +1,4 @@
-// Autopiloto — envia o formulário de captura (sprint-100k-vsl.html) direto para o
+// Chama — envia o formulário de captura (etapa-12.html) direto para o
 // Supabase via REST (PostgREST), sem precisar carregar o SDK completo do supabase-js.
 // Depende de: assets/config.js (window.SPRINT100K_CONFIG) e supabase/schema.sql aplicado.
 
@@ -103,13 +103,13 @@
       : payload.tipo_clinica;
 
     var linhas = [
-      'Olá! Vim pelo formulário do Autopiloto e quero saber mais.',
+      'Olá! Vim pelo site da Chama e quero meu diagnóstico gratuito.',
       '',
       'Nome: ' + payload.nome,
-      'Tipo de clínica: ' + tipoDisplay,
-      'Localização: ' + payload.localizacao,
+      'Segmento: ' + tipoDisplay,
+      'Cidade/UF: ' + payload.localizacao,
       'Ticket médio: ' + payload.ticket_medio,
-      'Capacidade ociosa: ' + payload.capacidade_ociosa,
+      'Consegue atender mais clientes: ' + payload.capacidade_ociosa,
     ];
 
     var digits = waNumber.replace(/\D/g, '');

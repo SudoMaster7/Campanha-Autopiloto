@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Autopiloto</title>
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="alternate icon" href="assets/img/favicon.ico">
-  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chama</title>
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="alternate icon" href="assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
-
 <body>
   <div class="frame">
     <div class="top-bar">
       <a class="btn-back" href="etapa-04.html" aria-label="Voltar para etapa anterior">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
       </a>
-      <div class="progress" role="img" aria-label="Etapa 5 de 9">
+      <div class="progress" role="img" aria-label="Etapa 5 de 12">
         <span class="seg filled"></span>
         <span class="seg filled"></span>
         <span class="seg filled"></span>
         <span class="seg filled"></span>
         <span class="seg filled"></span>
+        <span class="seg"></span>
+        <span class="seg"></span>
+        <span class="seg"></span>
         <span class="seg"></span>
         <span class="seg"></span>
         <span class="seg"></span>
@@ -38,70 +36,33 @@
     </div>
 
     <main class="fade-in">
-      <p class="eyebrow">05 · Tire suas dúvidas</p>
-      <h1 class="title">Tire suas dúvidas sobre o Autopiloto</h1>
+      <p class="eyebrow">05 · Diferenciais</p>
+      <h1 class="title">Por que uma equipe completa faz diferença no resultado</h1>
 
-      <div class="card chat-card">
-        <div class="chat-header">
-          <span class="online-dot"></span>
-          <span>Atendimento Autopiloto</span>
-        </div>
-        <div class="chat-notice">Conectando você no chat...</div>
+      <div class="card compare-card">
+        <p class="card-title">I. Fazer por conta própria</p>
+        <p>Você posta quando sobra tempo, sem planejamento e sem padrão visual. O cliente percebe, e a credibilidade da empresa sente. Enquanto isso, as mensagens se acumulam.</p>
+      </div>
 
-        <div class="chat-body" id="chatBody">
-          <div class="bubble assistant">Oi! Vi que você chegou por aqui interessado no Autopioloto 👋</div>
-          <div class="bubble user">Olá, tudo bem?</div>
-          <div class="bubble assistant">Tudo otimo! Me conta uma coisa: hoje sua empresa já investem em anúncio pra atrair paciente,
-            ou é mais indicação mesmo?</div>
-          <div class="bubble user">É mais indicação mesmo, nunca rodamos anúncio</div>
-          <div class="bubble assistant">Entendi, isso é super comum por aqui. E qual procedimento costuma ser o
-            carro-chefe de vocês? O que dá mais retorno</div>
-          <div class="bubble user">Harmonização facial e preenchimento, principalmente</div>
-          <div class="bubble assistant">Ótimo nicho pra isso funcionar bem. Última pergunta: se a agenda encher, vocês
-            conseguem absorver mais paciente? Tem espaço na estrutura hoje?</div>
-          <div class="bubble user">Consigo sim, tenho margem tranquila</div>
-          <div class="bubble assistant">Perfeito! Esse é exatamente o perfil que a gente atende melhor. Fica à vontade
-            pra perguntar sobre preço, prazo, garantia, o que quiser. Daqui a pouco te conecto com a equipe de verdade.
-          </div>
-        </div>
+      <div class="card compare-card">
+        <p class="card-title">II. Vários fornecedores separados</p>
+        <p>Um designer, um gestor de tráfego, alguém para as redes. Cada um com a sua visão e ninguém olhando o todo. No fim, quem coordena tudo é você.</p>
+      </div>
 
-        <div class="chat-chips" id="chatChips">
-          <button class="chat-chip" type="button" data-q="Quanto custa?">Quanto custa?</button>
-          <button class="chat-chip" type="button" data-q="Como funciona a garantia?">Como funciona a garantia?</button>
-          <button class="chat-chip" type="button" data-q="Preciso de equipe própria?">Preciso de equipe
-            própria?</button>
-          <button class="chat-chip" type="button" data-q="Quanto tempo demora?">Quanto tempo demora?</button>
-          <button class="chat-chip" type="button" data-q="É mensalidade?">É mensalidade?</button>
-          <button class="chat-chip" type="button" data-q="Tem vaga disponível?">Tem vaga disponível?</button>
-        </div>
-
-        <div class="chat-input-row">
-          <input type="text" class="chat-input" id="chatInput" placeholder="Escreva sua pergunta..." maxlength="180"
-            autocomplete="off">
-          <button class="chat-send" id="chatSend" type="button" aria-label="Enviar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round">
-              <line x1="22" y1="2" x2="11" y2="13"></line>
-              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-            </svg>
-          </button>
-        </div>
-
-        <div class="chat-cta">
-          <a href="sprint-100k-vsl.html#form" id="chatCtaBtn">Quero minha conversa de diagnóstico</a>
-        </div>
+      <div class="card compare-card highlight">
+        <span class="badge-corner">Recomendado</span>
+        <p class="card-title">III. Equipe Chama</p>
+        <p>Uma equipe só, com um planejamento só: conteúdo, design, tráfego pago, atendimento e suporte trabalhando juntos para a sua empresa ganhar relevância e vender mais no digital.</p>
       </div>
     </main>
 
     <div class="cta-fixed">
       <div class="cta-fixed-inner">
-        <a class="btn-primary" href="etapa-06.html">Ver o processo</a>
+        <a class="btn-primary" href="etapa-06.html">Ver como trabalhamos</a>
       </div>
     </div>
   </div>
 
   <script src="assets/app.js"></script>
-  <script src="assets/chat-sim.js"></script>
 </body>
-
 </html>

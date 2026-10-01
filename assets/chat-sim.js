@@ -1,6 +1,6 @@
-// Autopiloto — simulador de chat interativo (etapa-05.html)
+// Chama — simulador de chat interativo (etapa-05.html)
 // Respostas por palavra-chave: cada uma reflete só fatos já escritos em outra
-// parte do site (preço, garantia, prazo etc. em sprint-100k-vsl.html). Se um
+// parte do site (serviços e diagnóstico nas etapas 03, 06 e 11). Se um
 // dado mudar lá, atualize aqui também. Sem resposta reconhecida -> FALLBACK,
 // nunca uma resposta genérica inventada na hora.
 
@@ -15,40 +15,44 @@
 
   var KB = [
     {
-      kws: ['preco', 'preço', 'valor', 'custa', 'investimento', 'quanto e', 'quanto é'],
-      a: 'O investimento é de R$ 6.590, pago uma única vez por ciclo. Dá uma olhada na seção "O investimento" mais abaixo pra ver tudo que está incluso.',
+      kws: ['servico', 'serviços', 'inclu', 'oferece', 'entrega', 'o que voces fazem', 'o que vocês fazem'],
+      a: 'Planejamento de marketing e comunicação, identidade visual e design gráfico, produção de conteúdo, materiais digitais, landing page, tráfego pago no Google e na Meta, chatbot, SAC e suporte em todas as plataformas. Tudo com uma equipe só.',
     },
     {
-      kws: ['garantia', 'nao funcionar', 'não funcionar', 'se nao der', 'se não der', 'risco'],
-      a: 'Garantimos 20 pacientes confirmados, agendados e realizados, em até 45 dias. Se não atingirmos esse número, continuamos trabalhando sem custo adicional até entregar, respeitadas as condições descritas em contrato.',
+      kws: ['preco', 'preço', 'valor', 'custa', 'investimento', 'quanto e', 'quanto é', 'mensalidade'],
+      a: 'O investimento depende do que a sua empresa precisa hoje. Depois do diagnóstico gratuito, montamos uma proposta com o escopo certo para o seu momento.',
     },
     {
-      kws: ['prazo', 'tempo', 'dias', 'quando comeca', 'quando começa', 'demora'],
-      a: 'A instalação completa (página, chatbot, tráfego e inside sales) leva de 30 a 45 dias. Os primeiros agendamentos costumam começar antes do ciclo estar 100% instalado.',
+      kws: ['segmento', 'nicho', 'ramo', 'atendem', 'restaurante', 'gastronom', 'loja', 'meu tipo'],
+      a: 'Atendemos empresas de diversos segmentos. A equipe tem mais de 5 anos de mercado e muita experiência no nicho gastronômico. No diagnóstico a gente avalia o seu caso.',
     },
     {
-      kws: ['recorrente', 'mensalidade', 'mensal', 'todo mes', 'todo mês', 'assinatura'],
-      a: 'Não é mensalidade. É um investimento único de R$ 6.590 por ciclo contratado. Continuidade depois disso é combinada à parte, na conversa de diagnóstico.',
+      kws: ['comeco', 'começo', 'comecar', 'começar', 'como faco', 'como faço', 'contato', 'diagnostico', 'diagnóstico'],
+      a: 'É só preencher o formulário do diagnóstico gratuito. Nossa equipe entra em contato pelo WhatsApp e te passa todas as orientações.',
     },
     {
-      kws: ['equipe', 'vendedor', 'preciso de alguem', 'preciso de alguém', 'recepcao', 'recepção', 'contratar'],
-      a: 'Não precisa contratar ninguém. O chatbot faz a triagem e o inside sales dedicado conduz o lead até o agendamento, sua equipe só recebe o paciente já pronto pro atendimento.',
+      kws: ['prazo', 'tempo', 'demora', 'resultado'],
+      a: 'Depende do ponto de partida da sua empresa. No diagnóstico apresentamos o planejamento com as etapas e o que esperar de cada uma. Prefiro não te prometer um prazo genérico aqui.',
     },
     {
-      kws: ['vaga', 'disponibilidade', 'quando posso comecar', 'quando posso começar', 'ciclo atual'],
-      a: 'As vagas desse ciclo são limitadas porque o atendimento é 1 a 1 com o sócio operador. Vale garantir sua conversa de diagnóstico o quanto antes.',
+      kws: ['equipe', 'preciso de alguem', 'preciso de alguém', 'contratar', 'funcionario', 'funcionário', 'designer', 'social media'],
+      a: 'Não precisa. Nossa equipe cuida do planejamento, do conteúdo, do design, dos anúncios e do atendimento. Você acompanha e aprova.',
     },
     {
-      kws: ['cancelar', 'desistir', 'reembolso'],
-      a: 'Isso é tratado na conversa de diagnóstico, junto com as condições completas do contrato. Prefiro ser preciso nesse ponto em vez de te dar uma resposta genérica aqui.',
+      kws: ['trafego', 'tráfego', 'anuncio', 'anúncio', 'google', 'instagram', 'facebook', 'meta', 'views', 'visualiza'],
+      a: 'Criamos e gerenciamos campanhas no Google e na Meta (Instagram e Facebook) para levar a sua empresa até o público certo, com acompanhamento e ajustes contínuos.',
     },
     {
-      kws: ['chatbot', 'automacao', 'automação', 'como funciona o sistema', 'como funciona'],
-      a: 'O sistema tem três partes: tráfego pago qualificado, um chatbot que faz a triagem e agenda sozinho, e nossa equipe conduzindo o paciente quente até o agendamento confirmado.',
+      kws: ['chatbot', 'automacao', 'automação', 'sac', 'atendimento', 'whatsapp'],
+      a: 'O chatbot responde seus clientes na hora, 24 horas por dia, e o SAC organiza o atendimento para nenhuma mensagem ficar sem resposta. Assim você converte mais e mantém o cliente por perto.',
+    },
+    {
+      kws: ['contrato', 'cancelar', 'desistir', 'reembolso', 'fidelidade'],
+      a: 'Isso é tratado direto com a equipe, junto com as condições da proposta. Prefiro ser preciso nesse ponto em vez de te dar uma resposta genérica aqui.',
     },
   ];
 
-  var FALLBACK = 'Entre em contato com a nossa equipe pra tirar essa dúvida na conversa de diagnóstico.';
+  var FALLBACK = 'Essa é uma ótima pergunta pra nossa equipe. No diagnóstico gratuito eles respondem tudo sobre o seu caso.';
 
   function norm(s) {
     return s

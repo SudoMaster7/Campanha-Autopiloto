@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Autopiloto</title>
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="alternate icon" href="assets/img/favicon.ico">
-<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chama</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="alternate icon" href="assets/img/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
   <div class="frame">
     <div class="top-bar">
       <a class="btn-back" href="etapa-08.html" aria-label="Voltar para etapa anterior">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
       </a>
-      <div class="progress" role="img" aria-label="Etapa 9 de 9">
+      <div class="progress" role="img" aria-label="Etapa 9 de 12">
         <span class="seg filled"></span>
         <span class="seg filled"></span>
         <span class="seg filled"></span>
@@ -29,27 +34,65 @@
         <span class="seg filled"></span>
         <span class="seg filled"></span>
         <span class="seg filled"></span>
+        <span class="seg"></span>
+        <span class="seg"></span>
+        <span class="seg"></span>
       </div>
     </div>
 
     <main class="fade-in">
-      <p class="eyebrow">09 · Antes de ver a oferta</p>
-      <h1 class="title">Você já viu o mecanismo, o processo e a capacidade, faz sentido para você?</h1>
-      <p class="subtext">Sistema completo que entrega clientes confirmados em 45 dias ou trabalhamos de graça. Vagas limitadas para manter a qualidade da garantia.</p>
+      <p class="eyebrow">09 · Tire suas dúvidas</p>
+      <h1 class="title">Tire suas dúvidas sobre como trabalhamos</h1>
 
-      <div class="card highlight">
-        <p class="card-label">O que vem a seguir</p>
-        <p>O próximo passo é ver a oferta completa e garantir sua posição neste ciclo.</p>
+      <div class="card chat-card">
+        <div class="chat-header">
+          <span class="online-dot"></span>
+          <span>Assistente automatizado · Chama</span>
+        </div>
+        <div class="chat-notice">Respostas automáticas sobre os nossos serviços. Dúvidas específicas da sua empresa são respondidas pela equipe no diagnóstico gratuito.</div>
+
+        <div class="chat-body" id="chatBody">
+          <div class="bubble assistant">Oi! 👋 Sou o assistente automático da Chama.</div>
+          <div class="bubble assistant">A gente cuida do posicionamento digital da sua empresa: planejamento, conteúdo, design, tráfego pago, chatbot e SAC, tudo com uma equipe só.</div>
+          <div class="bubble assistant">Escolha uma pergunta abaixo ou escreva a sua.</div>
+        </div>
+
+        <div class="chat-chips" id="chatChips">
+          <button class="chat-chip" type="button" data-q="Quais serviços estão inclusos?">Quais serviços estão inclusos?</button>
+          <button class="chat-chip" type="button" data-q="Quanto custa?">Quanto custa?</button>
+          <button class="chat-chip" type="button" data-q="Vocês atendem meu segmento?">Vocês atendem meu segmento?</button>
+          <button class="chat-chip" type="button" data-q="Em quanto tempo vejo resultado?">Em quanto tempo vejo resultado?</button>
+          <button class="chat-chip" type="button" data-q="Preciso ter equipe de marketing?">Preciso ter equipe de marketing?</button>
+          <button class="chat-chip" type="button" data-q="Como eu começo?">Como eu começo?</button>
+        </div>
+
+        <div class="chat-input-row">
+          <input type="text" class="chat-input" id="chatInput" placeholder="Escreva sua pergunta..." maxlength="180"
+            autocomplete="off">
+          <button class="chat-send" id="chatSend" type="button" aria-label="Enviar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+
+        <div class="chat-cta">
+          <a href="etapa-12.html" id="chatCtaBtn">Quero meu diagnóstico gratuito</a>
+        </div>
       </div>
     </main>
 
     <div class="cta-fixed">
       <div class="cta-fixed-inner">
-        <a class="btn-primary" href="sprint-100k-vsl.html">Ver a oferta completa</a>
+        <a class="btn-primary" href="sprint-100k-vsl.html">Assistir à apresentação</a>
       </div>
     </div>
   </div>
 
   <script src="assets/app.js"></script>
+  <script src="assets/chat-sim.js"></script>
 </body>
+
 </html>
